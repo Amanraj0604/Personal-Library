@@ -1,0 +1,40 @@
+{
+    "books": [
+      {
+        "title": "Book Title 1",
+        "image": "https://images.pexels.com/photos/1083633/pexels-photo-1083633.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description": "A brief description of Book Title 1.",
+        "author": "Author 1",
+        "publishYear": 2021
+      },
+      {
+        "title": "Book Title 2",
+        "image": "https://images.pexels.com/photos/1906437/pexels-photo-1906437.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description": "A brief description of Book Title 2.",
+        "author": "Author 2",
+        "publishYear": 2019
+      },
+      {
+        "title": "Book Title 3",
+        "image": "https://images.pexels.com/photos/1470170/pexels-photo-1470170.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description": "A brief description of Book Title 3.",
+        "author": "Author 3",
+        "publishYear": 2020
+      },
+      {
+        "title": "Book Title 4",
+        "image": "https://images.pexels.com/photos/1666320/pexels-photo-1666320.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description": "A brief description of Book Title 4.",
+        "author": "Author 4",
+        "publishYear": 2018
+      },
+      {
+        "title": "Book Title 5",
+        "image": "https://images.pexels.com/photos/2177482/pexels-photo-2177482.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "description": "A brief description of Book Title 5.",
+        "author": "Author 5",
+        "publishYear": 2022
+      }
+    ]
+  }
+  

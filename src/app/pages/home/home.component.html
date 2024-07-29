@@ -1,0 +1,98 @@
+<section class="welcome-section">
+    <h1>Welcome to the Library Management System</h1>
+</section>
+<div class="images" style="display: flex;">
+    <img style="padding: 10px;"
+        src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?auto=compress&cs=tinysrgb&w=600"
+        class="img-fluid" alt="Responsive image">
+    <img style="padding: 10px;"
+        src="https://images.pexels.com/photos/2177482/pexels-photo-2177482.jpeg?auto=compress&cs=tinysrgb&w=600"
+        class="img-fluid" alt="Responsive image">
+</div>
+<h2 id="Services">Our Services</h2>
+<section class="books-section" style="display: flex; align-items: center; justify-content: center;">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1083633/pexels-photo-1083633.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <button routerLink="/booklist">View Book List</button>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="card">
+                <img src="https://images.pexels.com/photos/1906437/pexels-photo-1906437.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+                <button routerLink="/add-book">Add a New Book</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @for (book of allBooks; track book.id) -->
+<h2 id="latest">Letest Book</h2>
+<div class="book-card-container">
+    @for (book of allBooks; track book.id){
+    <div class="book-card">
+      <img [src]="book.image" [alt]="book.title">
+      <h3>{{ book.title }}</h3>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <button class="read-more" (click)="book.showDetails = !book.showDetails">
+        {{ book.showDetails ? 'Close' : 'Read More' }}
+      </button>
+      <div class="icon-button">
+        <button class="first" [routerLink]="['/edit-book', book.id]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+          </svg>
+        </button>
+        <button class="second" [routerLink]="['/delete-book', book.id]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+          </svg>
+        </button>
+      </div>
+      <div class="book-details" [class.show]="book.showDetails">
+        <p><strong>Publish Year:</strong> {{ book.publishYear }}</p>
+        <p>{{ book.description }}</p>
+      </div>
+    </div>
+}
+  </div>
+  
+
+  <div class="about-container">
+    <div class="about-header">
+      <h1 id="About">About Us</h1>
+    </div>
+    <div class="about-content">
+      <div class="about-text">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum, at. Est mollitia rerum, tenetur rem veritatis quam soluta iusto voluptatibus cupiditate et culpa libero architecto accusantium doloribus deserunt dolor nobis quas repudiandae, vitae pariatur! Suscipit rem nam quae corrupti sequi.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.pexels.com/photos/4581325/pexels-photo-4581325.jpeg?auto=compress&cs=tinysrgb&w=600" alt="About Us">
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1 id="Contact">Contact Us</h1>
+      <p>We'd love to hear from you! Please reach out to us using the information below or fill out the contact form.</p>
+    </div>
+    <div class="contact-info">
+      <div class="info-item">
+        <h3>Address</h3>
+        <p>122001 Laxuman Vihar Gurugawn Haryana</p>
+      </div>
+      <div class="info-item">
+        <h3>Phone</h3>
+        <p>+91 6202384284</p>
+      </div>
+      <div class="info-item">
+        <h3>Email</h3>
+        <p>{{email}}</p>
+      </div>
+    </div>
+  </div>
+  
